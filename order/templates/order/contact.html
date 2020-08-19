@@ -1,0 +1,56 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href= "{% static 'order/css/styles.css'%}">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'order/images/logo.png'%}" alt="GetYourMeal.com">
+        </div>
+
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{%url 'contact'%}">Contact Us</a></li>
+            <li><a href="{%url 'menu'%}">Menu</a></li>
+        </ul>
+    </nav>
+    <h1 style="color: white; text-align: center;">Contact us & give your feedback</h1>
+    <br>
+
+    <section id= "contact">
+        <div id="contact-box">
+            <form action="{% url 'contact_form' %}" method="POST">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="full_name">Name: </label>
+                    <input type="text" name="full_name" id="full_name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group"> 
+                    <label for="phone_number">Phone Number: </label>
+                    <input type="phone" name="phone_number" id="phone_number" placeholder="Enter your contact number">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comments: </label>
+                    <textarea name="comment" id="comment" cols="30" rows="7"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="but" type = "submit"> Submit</button>
+                 </div>
+            </form>
+
+        </div>
+    </section>
+</body>
+</html>

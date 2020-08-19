@@ -1,0 +1,38 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="{% static 'order/css/styles.css' %}">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'order/images/logo.png'%}" alt="GetYourMeal.com">
+        </div>
+
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{%url 'contact'%}">Contact Us</a></li>
+            <li><a href="{%url 'menu'%}">Menu</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to PlaceYourOrder</h1>
+        <p>Nothing brings people together as good food!!</p>
+        <br>
+        <button class="btn" onClick="parent.location='menu.html'">Order Now </button>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright & copy; www.PlaceYourOrder.com. All rights reserved!
+        </div>
+    </footer>
+
+</body>
+</html>

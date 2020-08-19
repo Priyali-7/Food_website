@@ -1,0 +1,78 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href= "{% static 'order/css/styles.css'%}">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'order/images/logo.png'%}" alt="GetYourMeal.com">
+        </div>
+
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{%url 'contact'%}">Contact Us</a></li>
+            <li><a href="{%url 'menu'%}">Menu</a></li>
+        </ul>
+    </nav>
+    <h1 style="color: white; text-align: center;" >MENU</h1>
+    <section id="menu-container">
+    
+    <div id="menu">
+        <div class="con">
+            <h1>STARTER</h1>
+            <br>
+            <strong><b>Soup</b> <span>₹130</span></strong>
+            <p>Fresh corn, mushrooms</p>
+            <hr>
+            <strong><b>Bruschetta</b> <span>₹170</span></strong>
+            <p>Bread with pesto, tomatoes, onion, garlic</p>
+            <hr>
+            <strong><b>GarlicBread</b> <span>₹170</span></strong>
+            <p>Grilled ciabatta, garlic butter, onions</p>
+            <hr>
+            <strong><b>Tomozzarella</b> <span>₹170</span></strong>
+            <p>Tomatoes and mozzarella</p>
+            <hr>  
+        </div> 
+        <div class="con">
+            <h1>PIZZA</h1>
+            <strong><b>Margherita</b> <span>₹355</span></strong>
+            <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+            <hr> 
+            <strong>Chicken <span>₹405</span></strong>
+            <p>Fresh tomatoes, mozzarella, chicken, onions</p>
+            <hr>
+            <strong>Pineapple <span>₹450</span></strong>
+            <p>Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+            <hr>
+            <strong>MeatTown <span>₹550</span></strong>
+            <p>Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, chicken</p>
+            <hr>
+            <br>
+        </div> 
+        <div class="con">
+            <h1>PASTA</h1>
+            <strong><b>Lasagna</b> <span>₹300</span></strong>
+            <p>Special sauce, mozzarella, parmesan,chicken</p>
+            <hr>
+            <strong><b>Ravioli</b> <span>₹320</span></strong>
+            <p>Ravioli filled with cheese</p>
+            <hr>
+            <strong><b>SpaghettiClassica</b> <span>₹375</span></strong>
+            <p>Fresh tomatoes, onions, ground chicken</p>
+            <hr>
+            <strong><b>SeafoodPasta</b> <span>₹450</span></strong>
+            <p>Salmon, shrimp, lobster, garlic</p>
+            <hr>
+        </div> 
+    </div>
+</section>
+</body>
+</html>

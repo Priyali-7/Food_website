@@ -1,0 +1,184 @@
+html,body { 
+    background: url('../images/main.jpg') no-repeat center center fixed; 
+}
+
+
+/* Navigation bar*/
+
+#navbar {
+    display: flex;
+    box-align: center;
+}
+
+/* Navigation bar: List styling*/
+#navbar{
+    position: relative;  /*logo and headings in a row*/
+}
+
+#navbar ul{
+    display: flex; /* all the headings in one row*/
+}
+
+#navbar ul li{
+    list-style: none; /*removes bullet*/
+    font-size: 1.5rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 5px;
+    border-radius: 20px;
+    text-decoration: none ; /*removes underline*/
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Logo*/
+
+#logo img{
+    margin:3px 6px;
+    height: 80px;
+}
+
+/* Home section*/
+#home{
+    display: flex;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    padding: 0px;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0%;
+}
+
+/* utility class*/
+.btn{
+    padding: 6px 20px;
+    border: 3px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer{
+    background: black;
+    color:white;
+    padding: 9px 20px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center ;
+}
+
+/* Services section*/
+#services{
+    display: flex; /*single row*/
+    margin: 35px;
+    justify-content: center;
+}
+
+#services .box{
+    border: 2px solid red;
+    padding: 3px;
+    margin: 30px 50px; /*adjacent box chya madhla dist*/
+    border-radius: 28px; 
+    background: #f2f2f2; /*box cha bg color*/
+    margin-bottom: 10px; /*page ani box madhla margin*/
+    flex-basis: 33%
+}
+
+#services .box img{ 
+    height: 150px; /*img height*/
+    margin: auto;
+    display: block;
+}
+ 
+#services .box p{
+     font-family: 'Bree Serif', serif;
+} 
+
+/* Contact section*/
+
+#contact-box{
+    display: flex;
+    justify-content: center; /* center*/
+    align-items: center;
+    padding-bottom: 0.5px;
+}
+#contact-box input, 
+#contact-box textarea{
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    width: 100%;
+    padding: 0.2rem;
+    border-radius: 6px; /*makes edges round*/
+    font-size: 1rem;  
+} 
+#contact-box form{
+    width: 30%; /*horizontally kiti pasarla ahe te*/
+}
+
+#contact-box label{
+   font-size: 1.3rem;  /*name-- size and font*/
+   font-family: 'Bree Serif', serif;
+   color:white;
+
+}
+
+.form-group input {
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    display: block;
+    width: 300px;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 11px auto;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+.but{
+    padding: 6px 20px;
+    border: 3px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+/* Menu*/
+
+#menu .con{
+    border: 2px solid red;
+    padding: 3px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    border-radius: 28px; 
+    background: #f2f2f2; 
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    opacity: 0.8;
+}

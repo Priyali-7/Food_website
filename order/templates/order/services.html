@@ -1,0 +1,47 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href= "{% static 'order/css/styles.css'%}">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'order/images/logo.png'%}" alt="GetYourMeal.com">
+        </div>
+
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{%url 'contact'%}">Contact Us</a></li>
+            <li><a href="{%url 'menu'%}">Menu</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <section id="services-container">
+        <h2 style="text-align: center">Our Services</h2>
+        <div id="services">
+            <div class="box">
+                <img scr="{% static 'order/css/images/1.png' %}" alt="Food_Catering">
+                <h2>Food Catering</h2>
+                <p>We provide catering services</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'order/css/images/2.png' %}" alt="Bulk_Ordering">
+                <h2>Bulk Ordering</h2>
+                <p>We provide bulk ordering services</p>
+            </div>
+            <div class="box">
+                <img scr="{% static 'order/css/images/3.png' %}" alt="Food_Ordering">
+                <h2>Food Ordering</h2>
+                <p>We provide food oredering services</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
