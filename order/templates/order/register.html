@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {color: rgb(46, 8, 8); padding-top: 0.5rem;}
+    </style>
+    
+</head>
+<body>
+
+    <form action="register" method="POST">
+        {% csrf_token %}
+        <div>
+        <label for="full_name">Full name: </label>
+        <input type="text" name="full_name" placeholder="Full Name"><br>
+        </div>
+        <div>
+        <label for="user_name">User name: </label>
+        <input type="text" name="user_name" placeholder="User Name"><br>
+        </div>
+        <div>
+        <label for="email">Email ID: </label>
+        <input type="email" name="email" placeholder="Email"><br>
+        </div>
+        <div>
+        <label for="password1">Password: </label>
+        <input type="password" name="password1" placeholder="Password"><br>
+        </div>
+        <div>
+        <label for="password2">Confirm password: </label>
+        <input tupe="password" name="password2"  placeholder="Confrim Password"> <br>
+        </div>
+        
+        <input type="submit" name="submit">
+        </div>
+    </form>
+    <div>
+        {% for message in messages %}
+        <h3> {{message}}</h3>
+        {% endfor %}
+    </div>
+</body>
+</html>
